@@ -1,1 +1,1 @@
-Better than someone ~(￣▽￣)~*
+Better than someone \~(￣▽￣)\~*
