@@ -2,18 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chat App</title>
+  <title>Gemini</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="https://deepmind.google/technologies/gemini/static/icons/google_deepmind_32dp.c67bb05568f4.ico?fingerprint=a5617cb5b373c162d23a9f77dda988c"type="image/x-icon" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js" integrity="sha512-wW8K3TEH5ZViD4aMPzwPdhXKs/Kb5MAm7qLRd3QliYlHy0u9utSKZsZzqlZAgJ9xxXp81acwnrZVZ8oTfoLG1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- markdown -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+  <script>hljs.highlightAll();</script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/11.1.0/marked.min.js" integrity="sha512-49xmrP3uviO3RLWud0G4giZPhidSGQMjdsX3AkGH0tW4q1FN1nzTa4WGhyKIl+sggfI2q9rB78y/HvVK2HbVnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
+  </head>
 <body>
+  <div class="history" id="chat-history">
+
+  </div>
+  <div class="main">
+    <button id="enterKeyBtn" onclick="enterKey()">Enter Key</button>
     <div class="chat-container" id="chatContainer">
         <!-- Chat messages will be appended here dynamically -->
-      </div>
-      <div class="user-input">
-        <input type="text" id="user-message" placeholder="Type your message...">
-        <button onclick="handleAPI()">Send</button>
-      </div>
+    </div>
+    <div class="user-input">
+      <textarea autofocus id="user-message" rows="3" placeholder="Type your message..."></textarea>
+      <button onclick="handleAPI()">Send</button>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

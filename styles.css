@@ -4,17 +4,47 @@ p {
 
 code {
   font-size: 1rem;
+  font-family: "Courier New", Courier, monospace;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  display: block;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #F9F7F7;
+}
+
+/* .history {
+  width: 20em;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  overflow: auto;
+  background-color: aquamarine;
+} */
+
+pre {
+  white-space: pre-wrap;
+
+  align-self: center;
+  /* Đặt kích thước chữ cho phần tử <pre>. */
+  font-size: 14px;
+
+  /* Đặt khoảng cách giữa các dòng trong phần tử <pre>. */
+  line-height: 1.5;
+
+  /* Đặt khoảng đệm cho phần tử <pre>. */
+  padding: 10px;
+  margin: 0 auto;
+
+  /* Đặt bán kính bo tròn cho phần tử <pre>. */
+  border-radius: 5px;
 }
 
 .chat-container {
-  max-width: 100%;
+  max-width: 95%;
   margin: 20px auto;
   overflow: hidden;
   padding: 24px;
@@ -22,12 +52,12 @@ body {
 
 .message {
   clear: both;
-  margin-bottom: 10px;
 }
 
 .user-name-user {
   font-weight: bold;
   margin-bottom: 5px;
+  margin-top: 10px;
   float: right;
 }
 
@@ -40,32 +70,55 @@ body {
 .message-content {
   padding: 10px;
   border-radius: 8px;
-  max-width: 50%;
+  max-width: 100%;
   word-wrap: break-word;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 .user-message {
   float: right;
-  background-color: #5cb85c;
-  color: white;
+  background-color: #DBE2EF;
+  color: #000000;
   clear: right;
 }
 
 .bot-message {
   float: left;
-  background-color: #0275d8;
-  color: white;
+  background-color: #ffffff;
+  color: black;
   clear: left;
+  word-wrap: break-word;
 }
 
-input {
+textarea {
+  font-family: Arial, Helvetica, sans-serif;
   width: 80%;
   padding: 8px;
   margin-left: 80px;
   margin-bottom: 80px;
-  border-radius: 10px;
+  border-radius: 8px;
+  resize: none;
 }
 
 button {
+  height: 50%;
+  margin-top: 12px;
+  margin-left: 10px;
   padding: 8px;
+  border-radius: 8px;
+}
+
+.user-input {
+  display: flex;
+  justify-self: center;
+}
+
+pre code.hljs{
+  display: -webkit-inline-box !important;
+  padding: 0.5em !important;
+}
+
+#enterKeyBtn {
+  margin-left: 90%;
 }
